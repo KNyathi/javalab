@@ -3,6 +3,13 @@ abstract class Human {
     protected String name;
     protected int age;
     protected String gender;
+    
+    public Human() {
+        this.name = "Khaya";
+        this.age = 0;
+        this.gender = "unknown";
+    }
+
 
     public Human(String name, int age, String gender) {
         this.name = name;
@@ -50,6 +57,15 @@ abstract class Human {
 class Student extends Human {
     private String studentId;
     private static int studentCounter = 0;
+    
+    
+    public Student() {
+        super();
+        this.studentId = "unknown";
+        studentCounter++;
+        
+    }
+
 
     public Student(String name, int age, String gender, String studentId) {
         super(name, age, gender);
@@ -78,6 +94,13 @@ class Student extends Human {
 class Teacher extends Human {
     private String subject;
 
+
+    public Teacher() {
+        super();
+        this.subject = "English";
+    }
+
+
     public Teacher(String name, int age, String gender, String subject) {
         super(name, age, gender);
         this.subject = subject;
@@ -96,6 +119,11 @@ class Teacher extends Human {
 
 // Inherited class 3
 class TeachingAssistant extends Human {
+
+    public TeachingAssistant() {
+        super();
+    }
+	
     public TeachingAssistant(String name, int age, String gender) {
         super(name, age, gender);
     }
@@ -124,6 +152,10 @@ public class Main {
         Student student2 = new Student("Bob", 22, "Male", "S124");
         Teacher teacher = new Teacher("Bob", 35, "Male", "Math");
         TeachingAssistant assistant = new TeachingAssistant("Chris", 25, "Non-Binary");
+        
+        Student defaultStudent = new Student();
+        Teacher defaultTeacher = new Teacher();
+        TeachingAssistant defaultAssistant = new TeachingAssistant();
 
         // Display information and introduce each person
         System.out.println("Student Information");
@@ -131,6 +163,14 @@ public class Main {
         student1.displayInfo();
         student1.introduce();
         student1.study();
+        
+        
+        System.out.println("____________________");
+        defaultStudent.displayInfo();
+        defaultStudent.introduce();
+        defaultStudent.study();
+        
+        
         System.out.println(".................................................");
         
         student2.displayInfo();
@@ -143,6 +183,13 @@ public class Main {
         teacher.displayInfo();
         teacher.introduce();
         teacher.teach();
+        
+          
+        System.out.println("____________________");
+        defaultTeacher.displayInfo();
+        defaultTeacher.introduce();
+        defaultTeacher.teach();
+        
 	System.out.println(".................................................");
 	
         System.out.println("\nTeaching Assistant Information");
@@ -150,10 +197,18 @@ public class Main {
         assistant.displayInfo();
         assistant.introduce();
         assistant.assist();
+        
+         System.out.println("____________________");
+         defaultAssistant.displayInfo();
+         defaultAssistant.introduce();
+         defaultAssistant.assist();
+         
         System.out.println(".................................................");
         
         // Display the student counter
         System.out.println("Number of students: " + Student.getStudentCounter());
+        
+       
     }
 }
 
