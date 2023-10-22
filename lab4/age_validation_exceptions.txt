@@ -1,0 +1,18 @@
+Exception occurred at: 2023-10-22T03:07:36.898451
+Exception: CustomAgeException: Age is invalid. Please enter an age between 0 and 120.
+Stack Trace:
+AgeValidator.validateAge(AgeValidator.java:20)
+AgeValidator.main(AgeValidator.java:9)
+------------------------------
+Exception occurred at: 2023-10-22T03:09:22.684460
+Exception: CustomAgeException: Age is invalid. Please enter an age between 0 and 120.
+Stack Trace:
+AgeValidator.validateAge(AgeValidator.java:20)
+AgeValidator.main(AgeValidator.java:9)
+------------------------------
+Exception occurred at: 2023-10-22T03:09:58.673398
+Exception: CustomAgeException: Age is invalid. Please enter an age between 0 and 120.
+Stack Trace:
+AgeValidator.validateAge(AgeValidator.java:20)
+AgeValidator.main(AgeValidator.java:9)
+------------------------------
