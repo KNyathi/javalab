@@ -5,11 +5,14 @@ public class FileCopy {
         // Define the names of the source and target files
         String sourceFileName = "source.txt"; // Name of the source file
         String targetFileName = "target.txt"; // Name of the target file
+        
+        FileInputStream fis = null;
+	FileOutputStream fos = null;
 
         try {
             // Open the source file for reading and the target file for writing
-            FileInputStream fis = new FileInputStream(sourceFileName);
-            FileOutputStream fos = new FileOutputStream(targetFileName);
+            fis = new FileInputStream(sourceFileName);
+            fos = new FileOutputStream(targetFileName);
 
             // Create a buffer to read and write data
             byte[] buffer = new byte[1024];

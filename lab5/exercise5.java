@@ -9,6 +9,12 @@ public class exercise5 {
             // Letter to search for
             char searchLetter = '9';
 
+            // Check if the searchLetter is a letter
+            if (!Character.isLetter(searchLetter)) {
+                System.err.println("Invalid search letter. Please enter a valid letter.");
+                return;
+            }
+
             // Regular expression to find words starting with the specified letter
             String regex = "\\b" + searchLetter + "\\w*";
 
