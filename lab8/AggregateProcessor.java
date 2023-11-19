@@ -2,8 +2,13 @@ import java.util.List;
 
 public class AggregateProcessor {
     @DataProcessor
-    public int aggregateData(List<String> sentences) {
-        // Implement data aggregation (e.g., count the number of sentences)
-        return sentences.size();
+    public String aggregateData(List<String> processedData) {
+        //Implement data aggregation 
+        
+        StringBuilder result = new StringBuilder();
+        for (String sentence : processedData) {
+        	result.append(sentence).append(" ");
+        }
+        return result.toString().trim();
     }
 }

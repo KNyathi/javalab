@@ -6,10 +6,10 @@ public class exercise3 {
     public static void main(String[] args) {
         int[] items = {30, 60, 40, 20, 10, 35, 50, 55, 15}; // Weight of each item
 
-        int maxCapacity = 150; // Maximum carrying capacity of workers
-        int numWorkers = 3; // Number of workers
+        int maxCapacity = 1; // Maximum carrying capacity of workers
+        int numWorkers = 4; // Number of workers
 
-        CountDownLatch startSignal = new CountDownLatch(1); // Signal to start the transfer
+        CountDownLatch startSignal = new CountDownLatch(500); // Signal to start the transfer
         CountDownLatch doneSignal = new CountDownLatch(numWorkers); // Signal to finish the transfer
 
         ExecutorService executor = Executors.newFixedThreadPool(numWorkers);
